@@ -1,10 +1,9 @@
 import React from "react";
 import Section from "./components/Section";
 
-import data from "./data/index";
-import SideMenu from "./components/SideMenu";
-import MenuForm from "./components/MenuForm";
 import { SideMenuProvider } from "./contexts/sidemenu";
+
+import data from "./data/index";
 
 const App: React.FC = () => {
   return (

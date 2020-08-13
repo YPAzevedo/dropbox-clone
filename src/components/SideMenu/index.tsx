@@ -28,8 +28,6 @@ const SideMenu: React.FC<Props> = ({ children, open }) => {
 
   const className = classes.join(" ").trim();
 
-  console.log(className);
-
   return <Container className={className}>{children}</Container>;
 };
 
