@@ -7,6 +7,7 @@ import {
   HeaderWrapper,
   DropboxLogo,
 } from "./styles";
+import useSideMenu from "../../contexts/sidemenu";
 
 interface Props {
   variant: "blue" | "beige" | "white" | "black";
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const Section: React.FC<Props> = ({ title, description, variant }) => {
+  const { setActive } = useSideMenu();
+
   return (
     <Container className={variant}>
     <HeaderWrapper>
@@ -24,7 +27,7 @@ const Section: React.FC<Props> = ({ title, description, variant }) => {
           <span>Dropbox</span>
         </h1>
 
-        <button >
+        <button onClick={() => setActive(true)} >
           Interagir
         </button>
       </Header>

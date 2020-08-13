@@ -3,10 +3,12 @@ import Section from "./components/Section";
 
 import data from "./data/index";
 import SideMenu from "./components/SideMenu";
+import MenuForm from "./components/MenuForm";
+import { SideMenuProvider } from "./contexts/sidemenu";
 
 const App: React.FC = () => {
   return (
-    <>
+    <SideMenuProvider>
       <Section
         variant="blue"
         title={data[0].title}
@@ -32,8 +34,7 @@ const App: React.FC = () => {
         title={data[4].title}
         description={data[4].description}
       />
-      <SideMenu />
-    </>
+    </SideMenuProvider>
   );
 };
 
